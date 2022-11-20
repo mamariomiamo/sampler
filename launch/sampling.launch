@@ -1,0 +1,17 @@
+<launch>
+
+    <node name="sampler" pkg="sampler" type="sampler" output="screen">
+    <param name="x_variance" value="0.03"/>
+    <param name="sample_number" value="500"/>
+    <param name="previous_center_x" value="2.3"/>
+    <param name="previous_center_y" value="4.7"/>
+    <param name="previous_center_z" value="5"/>
+    <param name="guide_x" value="2"/>
+    <param name="guide_y" value="5"/>
+    <param name="guide_z" value="5"/>
+    </node>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sampler)/config/sample.rviz" output="screen"/>
+    
+
+</launch>
